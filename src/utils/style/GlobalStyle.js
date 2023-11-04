@@ -26,6 +26,11 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  .inWrap {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
   header, 
   #home {
     background-color:${colors.primary}
