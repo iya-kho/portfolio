@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
+const ContactStyled = styled.section``;
+
 export function Contact() {
-  const Contact = styled.section`
-  `;
   return (
-    <Contact id="contact" className='inWrap'>
+    <ContactStyled id="contact" className="inWrap">
       <h2>contact</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -22,6 +22,6 @@ export function Contact() {
         suscipit adipiscing bibendum est ultricies. Volutpat est velit egestas dui id ornare arcu
         odio.
       </p>
-    </Contact>
+    </ContactStyled>
   );
 }

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { colors } from './variables';
+import { colors, fonts } from './variables';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -9,12 +9,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: ${fonts.primary};
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Exo 2', sans-serif;
+  h1, h2 {
+    font-family: ${fonts.secondary};
     text-transform: uppercase;
+  }
+
+  h2 {
     color: ${colors.secondary}
   }
 
@@ -33,12 +36,23 @@ export const GlobalStyle = createGlobalStyle`
 
   header, 
   #home {
-    background-color:${colors.primary}
+    background-color: ${colors.primary};
   }
 
   header > *,
   #home > * {
     color: #fff
+  }
+
+  .custom-type-animation-cursor::after {
+    content: '|';
+    animation: cursor 1.1s infinite step-start;
+  }
+
+  @keyframes cursor {
+    50% {
+      opacity: 0;
+    }
   }
 
 `;

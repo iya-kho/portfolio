@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
-export function Projects() {
-  const Projects = styled.section`
-    background-color: pink;
-  `;
+const ProjectsStyled = styled.section`
+  background-color: pink;
+`;
 
-  const Project = styled.div``;
+const Project = styled.div``;
+
+export function Projects() {
   return (
-    <Projects id="projects">
+    <ProjectsStyled id="projects">
       <h2 className="inWrap">projects</h2>
       <Project>
         <div className="inWrap">
@@ -29,6 +30,6 @@ export function Projects() {
           </p>
         </div>
       </Project>
-    </Projects>
+    </ProjectsStyled>
   );
 }

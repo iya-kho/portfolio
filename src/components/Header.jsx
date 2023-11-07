@@ -2,51 +2,52 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
 import { colors, otherVariables } from '../utils/style/variables';
 
-export function Header() {
-  const HeaderWrap = styled.header`
-    background-color: ${colors.primary};
-    height: ${otherVariables.headerHeight};
-    position: fixed;
-    top: 0;
+const HeaderWrap = styled.header`
+  background-color: ${colors.primary};
+  height: ${otherVariables.headerHeight};
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  &:after {
+    content: '';
+    background-color: #fff;
     width: 100%;
-    &:after {
-      content: '';
-      background-color: #fff;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: scaleX(0);
-    }
-  `;
-
-  const HeaderInner = styled.div`
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  `;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+  }
+`;
 
-  const Logo = styled.div`
-    cursor: pointer;
-  `;
+const HeaderInner = styled.div`
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-  const NavBar = styled.nav``;
+const Logo = styled.div`
+  cursor: pointer;
+`;
 
-  const StyledLink = styled(Link)`
-    text-transform: uppercase;
-    margin-right: 30px;
-    cursor: pointer;
-  `;
+const NavBar = styled.nav``;
 
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+const StyledLink = styled(Link)`
+  text-transform: uppercase;
+  margin-right: 30px;
+  cursor: pointer;
+`;
 
+const scrollToTop = () => {
+  scroll.scrollToTop();
+};
+
+export function Header() {
   return (
     <HeaderWrap>
-      <HeaderInner className='inWrap'>
+      <HeaderInner className="inWrap">
         <Logo onClick={() => scrollToTop()}>
           <p>LOGO</p>
         </Logo>
