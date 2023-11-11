@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import { Link, animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
 import { colors, otherVariables } from '../utils/style/variables';
@@ -18,6 +20,18 @@ const HeaderWrap = styled.header`
     top: 0;
     left: 0;
     transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: transform 300ms ease;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+  }
+
+  &.scrolled:after {
+    transform: scaleX(1);
+  }
+
+  &.scrolled .indexTop {
+    color: #000;
+    z-index: 3;
   }
 `;
 
@@ -45,13 +59,26 @@ const scrollToTop = () => {
 };
 
 export function Header() {
+  const [scrollTop, setScrollTop] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollTop(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <HeaderWrap>
+    <HeaderWrap className={scrollTop === 0 ? '' : 'scrolled'}>
       <HeaderInner className="inWrap">
-        <Logo onClick={() => scrollToTop()}>
+        <Logo onClick={() => scrollToTop()} className='indexTop'>
           <p>LOGO</p>
         </Logo>
-        <NavBar>
+        <NavBar className='indexTop'>
           <StyledLink activeClass="active" to="home" spy={true} smooth={true} duration={500}>
             home
           </StyledLink>
