@@ -43,4 +43,5 @@ export const skillsList = [
   'Formik',
   'axios',
   'Postman',
+  'eslint'
 ];

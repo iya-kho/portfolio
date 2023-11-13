@@ -2,6 +2,7 @@ export const colors = {
   primary: '#224870',
   primaryDark: '#1d3c5d',
   secondary: '#F06543',
+  secondaryDark: '#692f23',
 };
 
 export const fonts = {
@@ -12,4 +13,12 @@ export const fonts = {
 
 export const otherVariables = {
   headerHeight: '65px',
+  burgerLineHeight: 4,
+  headerTransition: 'transform 300ms ease',
+};
+
+export const devices = {
+  mobile: '(max-width: 650px)',
+  tablet: '(max-width: 900px)',
+  laptop: '(min-width: 900px)',
 };

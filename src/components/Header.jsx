@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
+
 import { colors, otherVariables } from '../utils/style/variables';
+import { NavBar, Burger } from './index';
 
 const HeaderWrap = styled.header`
   background-color: ${colors.primary};
@@ -11,7 +12,8 @@ const HeaderWrap = styled.header`
   z-index: 1;
   top: 0;
   width: 100%;
-  &:after {
+  &:after,
+  &:before {
     content: '';
     background-color: #fff;
     width: 100%;
@@ -20,12 +22,20 @@ const HeaderWrap = styled.header`
     top: 0;
     left: 0;
     transform: scaleX(0);
+    transition: ${otherVariables.headerTransition};
+  }
+
+  &:after {
     transform-origin: 100% 50%;
-    transition: transform 300ms ease;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
   }
 
-  &.scrolled:after {
+  &:before {
+    transform-origin: 0% 50%;
+  }
+
+  &.scrolled:after,
+  &.menuOpen:before {
     transform: scaleX(1);
   }
 
@@ -46,23 +56,18 @@ const Logo = styled.div`
   cursor: pointer;
 `;
 
-const NavBar = styled.nav``;
-
-const StyledLink = styled(Link)`
-  text-transform: uppercase;
-  margin-right: 30px;
-  cursor: pointer;
-`;
-
 const scrollToTop = () => {
-  scroll.scrollToTop();
+  scroll.scrollToTop({duration: 0});
 };
 
 export function Header() {
   const [scrollTop, setScrollTop] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollTop(window.scrollY);
+      setMenuOpen(false);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -72,47 +77,36 @@ export function Header() {
     };
   }, []);
 
+  let headerWrapClass = '';
+  let navBarClass = '';
+  let burgerClass = '';
+
+  if (scrollTop === 0 && menuOpen === false) {
+    headerWrapClass = '';
+    navBarClass = '';
+    burgerClass = '';
+  }
+
+  if (scrollTop !== 0 && menuOpen === false) {
+    headerWrapClass = 'scrolled';
+    navBarClass = 'indexTop';
+    burgerClass = 'indexTop';
+  }
+
+  if (menuOpen === true) {
+    headerWrapClass = 'menuOpen';
+    navBarClass = 'menuOpen';
+    burgerClass = 'menuOpen';
+  }
+
   return (
-    <HeaderWrap className={scrollTop === 0 ? '' : 'scrolled'}>
+    <HeaderWrap className={headerWrapClass}>
       <HeaderInner className="inWrap">
-        <Logo onClick={() => scrollToTop()} className='indexTop'>
+        <Logo onClick={() => scrollToTop()} className="indexTop">
           <p>LOGO</p>
         </Logo>
-        <NavBar className='indexTop'>
-          <StyledLink activeClass="active" to="home" spy={true} smooth={true} duration={500}>
-            home
-          </StyledLink>
-          <StyledLink
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            about
-          </StyledLink>
-          <StyledLink
-            activeClass="active"
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            projects
-          </StyledLink>
-          <StyledLink
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            contact
-          </StyledLink>
-        </NavBar>
+        <Burger menuOpen={menuOpen} setMenuOpen={setMenuOpen} className={burgerClass} />
+        <NavBar className={navBarClass} />
       </HeaderInner>
     </HeaderWrap>
   );
