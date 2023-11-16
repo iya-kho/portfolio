@@ -3,7 +3,9 @@ import { TypeAnimation } from 'react-type-animation';
 import { useState } from 'react';
 
 import { colors, devices, otherVariables } from '../utils/style/variables';
-import myPicBig from '../assets/images/landingImages/my-pic-900.png';
+import myPicSmall from '../assets/images/my-pic-450.png';
+import myPicMedium from '../assets/images/my-pic-650.png';
+import myPicLarge from '../assets/images//my-pic-900.png';
 
 const HomeWrap = styled.section`
   height: 100vh;
@@ -149,7 +151,16 @@ export function Home() {
           )}
         </TextWrap>
         <PicWrap>
-          <img src={myPicBig} />
+          <img
+            alt="My picture"
+            src={myPicLarge}
+            srcSet={`
+              ${myPicLarge} 900w,
+              ${myPicMedium} 650w,
+              ${myPicSmall} 450w
+            `}
+            sizes="(max-width: 450px) 450px, (max-width: 850px) 650px, 900px"
+          />
         </PicWrap>
       </HomeInner>
     </HomeWrap>
