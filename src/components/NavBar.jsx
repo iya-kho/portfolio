@@ -11,7 +11,7 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledNav = styled.nav`
-  @media ${devices.tablet} {
+  @media ${devices.tabletL} {
     background-color: #fff;
     color: #000;
     position: fixed;

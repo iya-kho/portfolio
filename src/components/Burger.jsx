@@ -4,14 +4,14 @@ import { PropTypes } from 'prop-types';
 import { devices, colors, otherVariables } from '../utils/style/variables';
 
 const StyledBurger = styled.div`
+  display: none;
   cursor: pointer;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 25px;
 
-  @media ${devices.laptop} {
-    display: none;
+  @media ${devices.tabletL} {
+    display: flex;
   }
 
   &:before,

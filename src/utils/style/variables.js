@@ -18,7 +18,10 @@ export const otherVariables = {
 };
 
 export const devices = {
-  mobile: '(max-width: 650px)',
-  tablet: '(max-width: 900px)',
-  laptop: '(min-width: 900px)',
+  mobileS: '(max-width: 350px)',
+  mobileL: '(max-width: 450px)',
+  tabletS: '(max-width: 650px)',
+  tabletL: '(max-width: 850px)',
+  laptopS: '(max-width: 1024px)',
+  laptopL: '(min-width: 1024px)',
 };

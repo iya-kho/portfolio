@@ -2,38 +2,94 @@ import styled from 'styled-components';
 import { TypeAnimation } from 'react-type-animation';
 import { useState } from 'react';
 
-import { colors } from '../utils/style/variables';
-import myPic from '../assets/images/landingImages/my-pic.png';
+import { colors, devices, otherVariables } from '../utils/style/variables';
+import myPicBig from '../assets/images/landingImages/my-pic-900.png';
 
 const HomeWrap = styled.section`
   height: 100vh;
+
+  @media ${devices.tabletL} {
+    height: auto;
+  }
 `;
 
 const HomeInner = styled.div`
   height: 100%;
-  display: flex;
-  align-items: center;
+  position: relative;
+  &.inWrap {
+    padding-top: ${otherVariables.headerHeight};
+  }
+  @media ${devices.tabletL} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
+
 const TextWrap = styled.div`
-  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
   & h1 {
     margin: 10px 0;
     font-size: 40px;
+    @media ${devices.laptopS} {
+      font-size: 35px;
+    }
+    @media ${devices.tabletL} {
+      font-size: 40px;
+    }
+    @media ${devices.tabletS} {
+      font-size: 35px;
+    }
+    @media ${devices.mobileL} {
+      font-size: 27px;
+    }
+    @media ${devices.mobileS} {
+      font-size: 22px;
+    }
   }
   & p {
     font-size: 18px;
   }
+
+  @media ${devices.tabletL} {
+    position: static;
+    transform: none;
+    margin: 50px 40px;
+    height: 100px;
+  }
+
+  @media ${devices.mobileL} {
+    margin: 30px 0;
+  }
 `;
 
-const HomePic = styled.div`
-  height: 100%;
-  width: 50%;
-  background-image: url(${myPic});
-  background-attachment: fixed;
-  background-position-x: 80%;
-  background-repeat: no-repeat;
-  background-size: contain;
+const PicWrap = styled.div`
+  display: flex;
+  justify-content: end;
   position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  @media ${devices.tabletL} {
+    justify-content: center;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+
+    @media ${devices.tabletL} {
+      height: 650px;
+    }
+
+    @media ${devices.tabletS} {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   &:after {
     content: '';
     background-color: ${colors.primary};
@@ -42,7 +98,7 @@ const HomePic = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    opacity: 0.25;
+    opacity: 0.45;
   }
 `;
 
@@ -53,7 +109,7 @@ export function Home() {
   return (
     <HomeWrap id="home">
       <HomeInner className="inWrap">
-        <TextWrap>
+        <TextWrap className="indexTop">
           <TypeAnimation
             wrapper="p"
             cursor={false}
@@ -92,7 +148,9 @@ export function Home() {
             />
           )}
         </TextWrap>
-        <HomePic />
+        <PicWrap>
+          <img src={myPicBig} />
+        </PicWrap>
       </HomeInner>
     </HomeWrap>
   );

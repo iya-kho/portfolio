@@ -9,7 +9,7 @@ const HeaderWrap = styled.header`
   background-color: ${colors.primary};
   height: ${otherVariables.headerHeight};
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   width: 100%;
   &:after,
@@ -38,10 +38,16 @@ const HeaderWrap = styled.header`
   &.menuOpen:before {
     transform: scaleX(1);
   }
-
-  &.scrolled .indexTop {
-    color: #000;
+  
+  & .indexTop,
+  & .indexTop:before,
+  & .indexTop:after {
     z-index: 3;
+  }
+  
+  &.scrolled .indexTop,
+  &.menuOpen .indexTop {
+    color: #000;
   }
 `;
 
@@ -93,10 +99,16 @@ export function Header() {
     burgerClass = 'indexTop';
   }
 
-  if (menuOpen === true) {
+  if (scrollTop === 0 && menuOpen === true) {
     headerWrapClass = 'menuOpen';
-    navBarClass = 'menuOpen';
-    burgerClass = 'menuOpen';
+    navBarClass = 'menuOpen indexTop';
+    burgerClass = 'menuOpen indexTop';
+  }
+
+  if (scrollTop !== 0 && menuOpen === true) {
+    headerWrapClass = 'menuOpen';
+    navBarClass = 'menuOpen indexTop';
+    burgerClass = 'menuOpen indexTop';
   }
 
   return (
