@@ -4,7 +4,7 @@ const ContactStyled = styled.section``;
 
 export function Contact() {
   return (
-    <ContactStyled id="contact" className="inWrap">
+    <ContactStyled id="contact" className="inWrap sectionVertPadding">
       <h2>contact</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

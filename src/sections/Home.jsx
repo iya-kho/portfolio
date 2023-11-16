@@ -3,9 +3,9 @@ import { TypeAnimation } from 'react-type-animation';
 import { useState } from 'react';
 
 import { colors, devices, otherVariables } from '../utils/style/variables';
-import myPicSmall from '../assets/images/my-pic-450.png';
-import myPicMedium from '../assets/images/my-pic-650.png';
-import myPicLarge from '../assets/images//my-pic-900.png';
+// import myPicSmall from '../assets/images/my-pic-450.png';
+// import myPicMedium from '../assets/images/my-pic-650.png';
+// import myPicLarge from '../assets/images//my-pic-900.png';
 
 const HomeWrap = styled.section`
   height: 100vh;
@@ -34,7 +34,6 @@ const TextWrap = styled.div`
   transform: translateY(-50%);
   & h1 {
     margin: 10px 0;
-    font-size: 40px;
     @media ${devices.laptopS} {
       font-size: 35px;
     }
@@ -153,12 +152,12 @@ export function Home() {
         <PicWrap>
           <img
             alt="My picture"
-            src={myPicLarge}
-            srcSet={`
-              ${myPicLarge} 900w,
-              ${myPicMedium} 650w,
-              ${myPicSmall} 450w
-            `}
+            src="/images/landing/my-pic-900.png"
+            srcSet="
+              /images/landing/my-pic-900.png 900w,
+              /images/landing/my-pic-650.png 650w,
+              /images/landing/my-pic-450.png 450w
+            "
             sizes="(max-width: 450px) 450px, (max-width: 850px) 650px, 900px"
           />
         </PicWrap>

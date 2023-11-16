@@ -15,10 +15,12 @@ export const GlobalStyle = createGlobalStyle`
   h1, h2 {
     font-family: ${fonts.secondary};
     text-transform: uppercase;
+    font-size: 40px;
   }
 
   h2 {
-    color: ${colors.secondary}
+    color: ${colors.secondary};
+    padding-bottom: 25px;
   }
 
   a {
@@ -32,7 +34,12 @@ export const GlobalStyle = createGlobalStyle`
   .inWrap {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .sectionVertPadding {
+    padding-top: 50px;
   }
 
   header, 
