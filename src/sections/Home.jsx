@@ -3,9 +3,6 @@ import { TypeAnimation } from 'react-type-animation';
 import { useState } from 'react';
 
 import { colors, devices, otherVariables } from '../utils/style/variables';
-// import myPicSmall from '../assets/images/my-pic-450.png';
-// import myPicMedium from '../assets/images/my-pic-650.png';
-// import myPicLarge from '../assets/images//my-pic-900.png';
 
 const HomeWrap = styled.section`
   height: 100vh;

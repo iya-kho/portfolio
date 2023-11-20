@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${fonts.primary};
   }
 
-  h1, h2 {
+  h1, h2, h3 {
     font-family: ${fonts.secondary};
     text-transform: uppercase;
     font-size: 40px;
@@ -61,6 +61,26 @@ export const GlobalStyle = createGlobalStyle`
     50% {
       opacity: 0;
     }
+  }
+
+  .bgCol1 {
+    background-color: ${colors.palette.bgCol1}
+  }
+
+  .bgCol2 {
+    background-color: ${colors.palette.bgCol2}
+  }
+
+  .bgCol3 {
+    background-color: ${colors.palette.bgCol3}
+  }
+
+  .bgCol4 {
+    background-color: ${colors.palette.bgCol4}
+  }
+
+  .bgCol5 {
+    background-color: ${colors.palette.bgCol5}
   }
 
 `;

@@ -3,6 +3,12 @@ export const colors = {
   primaryDark: '#1d3c5d',
   secondary: '#F06543',
   secondaryDark: '#692f23',
+  palette: {
+    bgCol1: '#0F0326',
+    bgCol2: '#4a6c6f',
+    bgCol3: '#636264',
+    bgCol4: '#69140E',
+  },
 };
 
 export const fonts = {
