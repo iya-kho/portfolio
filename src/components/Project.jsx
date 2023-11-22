@@ -3,18 +3,31 @@ import PropTypes from 'prop-types';
 import { CheckOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 
-import { fonts} from '../utils/style/variables';
+import { fonts, devices } from '../utils/style/variables';
 
 import { Laptop } from './Laptop';
 
 const ProjectStyled = styled.article`
   padding-top: 50px;
   padding-bottom: 50px;
+
+  @media ${devices.tabletL} {
+    padding-bottom: 100px;
+  }
 `;
 
 const ProjectInner = styled.div`
-  height: 650px;
+  height: 750px;
   display: flex;
+
+  @media ${devices.laptopS} {
+    height: 700px;
+  }
+
+  @media ${devices.tabletL} {
+    flex-direction: column;
+    height: auto;
+  }
 
   h3,
   h4,
@@ -24,28 +37,35 @@ const ProjectInner = styled.div`
     line-height: 1.5;
   }
 
-  h3 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-
-  h4 {
-    margin: 20px 0;
-    text-transform: uppercase;
-  }
-
-  .right {
+  .laptopContainer {
     width: 60%;
     display: flex;
     align-items: center;
+
+    @media ${devices.laptopS} {
+      width: 50%;
+    }
+
+    @media ${devices.tabletL} {
+      width: 100%;
+    }
   }
 
-  .left {
+  .descriptionContainer {
     width: 40%;
+
+    @media ${devices.laptopS} {
+      width: 50%;
+    }
+
+    @media ${devices.tabletL} {
+      width: 100%;
+      margin-bottom: 50px;
+    }
   }
 
   .laptop {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
   }
 
@@ -57,21 +77,25 @@ const ProjectInner = styled.div`
     margin-right: 7px;
   }
 
-  #buttonWeb {
+  #buttonTransp {
     margin-right: 40px;
   }
 
-  #buttonWeb,
-  #buttonCode {
+  #buttonTransp,
+  #buttonFill {
     font-family: ${fonts.primary};
+
+    @media ${devices.mobileL} {
+      margin-bottom: 30px;
+    }
   }
 
-  #buttonWeb:hover {
+  #buttonTransp:hover {
     color: #fff;
     border-color: #fff;
   }
 
-  #buttonCode:hover {
+  #buttonFill:hover {
     border-color: #d9d9d9;
     color: rgba(0, 0, 0, 0.88);
   }
@@ -79,6 +103,10 @@ const ProjectInner = styled.div`
   .buttons {
     margin-top: 20px;
     display: flex;
+
+    @media ${devices.mobileL} {
+      flex-direction: column;
+    }
   }
 
   .button {
@@ -96,8 +124,8 @@ const ProjectInner = styled.div`
 export function Project({ projectInfo, className }) {
   return (
     <ProjectStyled className={className}>
-      <ProjectInner className="inWrap">
-        <div className="left">
+      <ProjectInner className="wrapLarge">
+        <div className="descriptionContainer">
           <h3>{projectInfo.title}</h3>
           <p className="description">{projectInfo.description}</p>
           <h4>Development tools</h4>
@@ -114,23 +142,23 @@ export function Project({ projectInfo, className }) {
               ghost
               href={projectInfo.webLink}
               target="_blank"
-              id="buttonWeb"
+              id="buttonTransp"
               className="button"
             >
-              See it online
+              Check out the code
             </Button>
             <Button
               type="default"
               href={projectInfo.codeLink}
               target="_blank"
-              id="buttonCode"
+              id="buttonFill"
               className="button"
             >
-              Check out the code
+              See it online
             </Button>
           </div>
         </div>
-        <div className="right">
+        <div className="laptopContainer">
           <Laptop imgPath={`/images/projects/${projectInfo.picture}`} className="laptop" />
         </div>
       </ProjectInner>

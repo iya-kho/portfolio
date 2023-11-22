@@ -21,6 +21,17 @@ export const GlobalStyle = createGlobalStyle`
   h2 {
     color: ${colors.secondary};
     padding-bottom: 25px;
+    // text-align: center;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    margin: 20px 0;
+    text-transform: uppercase;
   }
 
   a {
@@ -31,11 +42,18 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
-  .inWrap {
-    max-width: 1400px;
+  .wrapLarge, .wrapSmall {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .wrapLarge {
+    max-width: 1400px;
+  }
+
+  .wrapSmall {
+    max-width: 800px;
   }
 
   .sectionVertPadding {

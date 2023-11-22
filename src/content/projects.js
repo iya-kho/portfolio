@@ -12,6 +12,7 @@ export const projectsData = [
       'React typing animation',
       'React scroll',
       'Ant Design',
+      'Ant Design'
     ],
     webLink: '#',
     codeLink: '#',
@@ -112,9 +113,10 @@ Kasa apartments:
 - scss
 - eslint
 - SVG Sprites
+- grid
 
 Vieux grimoire:
-Express, Postman, NoSQL, MongoDB, bcrypt, mongoose
+Express, Postman, NoSQL, MongoDB, bcrypt, mongoose, security OWASP
 
 
 Portfolio:

@@ -3,7 +3,7 @@ import { animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
 
 import { colors, otherVariables } from '../utils/style/variables';
-import { NavBar, Burger } from './index';
+import { NavBar, Burger } from '../components';
 
 const HeaderWrap = styled.header`
   background-color: ${colors.primary};
@@ -11,7 +11,7 @@ const HeaderWrap = styled.header`
   position: fixed;
   z-index: 2;
   top: 0;
-  width: 100%;
+  width: 100vw;
   &:after,
   &:before {
     content: '';
@@ -113,7 +113,7 @@ export function Header() {
 
   return (
     <HeaderWrap className={headerWrapClass}>
-      <HeaderInner className="inWrap">
+      <HeaderInner className="wrapLarge">
         <Logo onClick={() => scrollToTop()} className="indexTop">
           <p>LOGO</p>
         </Logo>

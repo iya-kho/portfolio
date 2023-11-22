@@ -1,4 +1,4 @@
-import { Home, About, Projects, Contact } from './sections/index';
+import { Home, About, Projects } from './sections';
 
 export function Main() {
   return (
@@ -6,7 +6,6 @@ export function Main() {
       <Home />
       <About />
       <Projects />
-      <Contact />
     </main>
   );
 }

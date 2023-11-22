@@ -15,7 +15,7 @@ const HomeWrap = styled.section`
 const HomeInner = styled.div`
   height: 100%;
   position: relative;
-  &.inWrap {
+  &.wrapLarge {
     padding-top: ${otherVariables.headerHeight};
   }
   @media ${devices.tabletL} {
@@ -106,7 +106,7 @@ export function Home() {
 
   return (
     <HomeWrap id="home">
-      <HomeInner className="inWrap">
+      <HomeInner className="wrapLarge">
         <TextWrap className="indexTop">
           <TypeAnimation
             wrapper="p"
