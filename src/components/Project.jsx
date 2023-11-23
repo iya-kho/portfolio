@@ -163,7 +163,7 @@ export function Project({ projectInfo, className }) {
           </div>
         </div>
         <div className="laptopContainer">
-          <Laptop imgPath={`/images/projects/${projectInfo.picture}`} className="laptop" />
+          <Laptop imgPath={`${process.env.PUBLIC_URL}/images/projects/${projectInfo.picture}`} className="laptop" />
         </div>
       </ProjectInner>
     </ProjectStyled>
