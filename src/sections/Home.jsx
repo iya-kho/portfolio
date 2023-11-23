@@ -149,11 +149,11 @@ export function Home() {
         <PicWrap>
           <img
             alt="My picture"
-            src={`${process.env.PUBLIC_URL}/images/landing/my-pic-900.png`}
+            src={`${process.env.PUBLIC_URL}/images/landing/my-pic-900.webp`}
             srcSet={`
-              ${process.env.PUBLIC_URL}/images/landing/my-pic-900.png 900w,
-              ${process.env.PUBLIC_URL}/images/landing/my-pic-650.png 650w,
-              ${process.env.PUBLIC_URL}/images/landing/my-pic-450.png 450w
+              ${process.env.PUBLIC_URL}/images/landing/my-pic-900.webp 900w,
+              ${process.env.PUBLIC_URL}/images/landing/my-pic-650.webp 650w,
+              ${process.env.PUBLIC_URL}/images/landing/my-pic-450.webp 450w
             `}
             sizes="(max-width: 450px) 450px, (max-width: 850px) 650px, 900px"
           />

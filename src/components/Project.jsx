@@ -17,11 +17,11 @@ const ProjectStyled = styled.article`
 `;
 
 const ProjectInner = styled.div`
-  height: 750px;
+  height: 700px;
   display: flex;
 
   @media ${devices.laptopS} {
-    height: 700px;
+    height: 670px;
   }
 
   @media ${devices.tabletL} {

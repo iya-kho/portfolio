@@ -24,7 +24,8 @@ export function About() {
       <h2>about</h2>
       <div className="aboutText">
         <p>{aboutText.p1}</p>
-        <p>{aboutText.p1}</p>
+        <p>{aboutText.p2}</p>
+        <p>{aboutText.p3}</p>
       </div>
       <div className="skills">
         <h4>skills</h4>

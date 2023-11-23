@@ -1,10 +1,9 @@
 export const aboutText = {
-  p1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et. Augue ut lectus arcu
-        bibendum at. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Et odio
-        pellentesque diam volutpat commodo sed egestas. Aliquet risus feugiat in ante. Urna duis
-        convallis convallis tellus id interdum velit laoreet id. In fermentum et sollicitudin ac
-        orci phasellus.`,
+  /* eslint-disable */
+  p1: `Hi there! I'm Iya Khorova, a junior front-end developer from Ukraine.`,
+  p2: `Holding a Master's degree in Applied Linguistics from Sorbonne University, I've been teaching French for 10 years before adding JavaScript to my working languages. In 2023 I earned an Associate level professional certificate in web development from OpenClassrooms and since then enjoy giving form to UI, especially with React.`,
+  p3: `When I'm not busy coding, you can find me practicing yoga or reading popular science books.`,
+  /* eslint-enable */
 };
 
 export const skillsList = [

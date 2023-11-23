@@ -1,9 +1,45 @@
 export const projectsData = [
   {
+    title: 'Kasa Apartments',
+    description:
+      'Front-end of apartment rental app. Using React Router for navigation and enhanced with custom elements, such as a carousel slider.',
+    picture: 'kasa_apartments.webp',
+    skills: [
+      'React',
+      'React Hooks',
+      'React Router',
+      'Custom carousel slider',
+      'CSS animations',
+      'SCSS',
+      'eslint',
+      'SVG Sprites',
+      'CSS grid',
+    ],
+    webLink: '#',
+    codeLink: 'https://github.com/iya-kho/kasa-apartments',
+  },
+  {
+    title: 'Vieux Grimoire Books',
+    description:
+      'Back-end of a book rating app. Using Express.js to implement a REST API and MongoDB to stock the data. Protected according to OWASP security guidelines.',
+    picture: 'vieux_grimoire.webp',
+    skills: [
+      'Express.js',
+      'Postman',
+      'NoSQL',
+      'MongoDB',
+      'bcrypt',
+      'mongoose',
+      'OWASP standards'
+    ],
+    webLink: '#',
+    codeLink: 'https://github.com/iya-kho/vieux-grimoire-books',
+  },
+  {
     title: 'The current portfolio',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
-    picture: 'portfolio.png',
+      'A dynamic landing page showcasing my works as a web developer. Built with React and featuring some CSS animations and Ant Design components.',
+    picture: 'portfolio.webp',
     skills: [
       'React',
       'React Hooks',
@@ -12,121 +48,17 @@ export const projectsData = [
       'React typing animation',
       'React scroll',
       'Ant Design',
-      'Ant Design'
+      'Pure CSS laptop frame',
     ],
-    webLink: '#',
-    codeLink: '#',
-  },
-  {
-    title: 'Project 2',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
-    picture: 'portfolio.png',
-    skills: [
-      'React',
-      'React Hooks',
-      'Styled Components',
-      'CSS animations',
-      'React typing animation',
-      'React scroll',
-      'Ant Design',
-    ],
-  },
-  {
-    title: 'Project 3',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
-    picture: 'portfolio.png',
-    skills: [
-      'React',
-      'React Hooks',
-      'Styled Components',
-      'CSS animations',
-      'React typing animation',
-      'React scroll',
-      'Ant Design',
-    ],
-    webLink: '#',
-    codeLink: '#',
-  },
-  {
-    title: 'Project 4',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
-    picture: 'portfolio.png',
-    skills: [
-      'React',
-      'React Hooks',
-      'Styled Components',
-      'CSS animations',
-      'React typing animation',
-      'React scroll',
-      'Ant Design',
-    ],
-    webLink: '#',
-    codeLink: '#',
-  },
-  {
-    title: 'Project 5',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
-    picture: 'portfolio.png',
-    skills: [
-      'React',
-      'React Hooks',
-      'Styled Components',
-      'CSS animations',
-      'React typing animation',
-      'React scroll',
-      'Ant Design',
-    ],
-    webLink: '#',
-    codeLink: '#',
-  },
-  {
-    title: 'Project 6',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
-    picture: 'portfolio.png',
-    skills: [
-      'React',
-      'React Hooks',
-      'Styled Components',
-      'CSS animations',
-      'React typing animation',
-      'React scroll',
-      'Ant Design',
-    ],
-    webLink: '#',
-    codeLink: '#',
+    webLink: 'ttps://iya-kho.github.io/portfolio/',
+    codeLink: 'https://github.com/iya-kho/portfolio',
   },
 ];
 
-
 /* 
-Kasa apartments:
-- React
-- React Hooks
-- React Router
-- Custom carousel
-- css animations
-- scss
-- eslint
-- SVG Sprites
-- grid
 
 Vieux grimoire:
 Express, Postman, NoSQL, MongoDB, bcrypt, mongoose, security OWASP
 
-
-Portfolio:
-- React
-- React Hooks
-- Styled Components
-- css animations
-- React typing animation
-- React scroll
-- Ant Design
-- Pure CSS laptop frame
 
 */
