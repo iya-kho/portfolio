@@ -77,6 +77,10 @@ const ProjectInner = styled.div`
     margin-right: 7px;
   }
 
+  #buttonFill {
+    display: none;
+  }
+
   #buttonTransp {
     margin-right: 40px;
   }

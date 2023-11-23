@@ -43,7 +43,7 @@ const FooterStyled = styled.footer`
 
 export function Footer() {
   return (
-    <FooterStyled>
+    <FooterStyled id='contact'>
       <div className="footerInner wrapLarge">
         <div className="contactItem">
           <EnvironmentOutlined className='icon' />

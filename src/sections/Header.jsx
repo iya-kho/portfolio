@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { colors, otherVariables } from '../utils/style/variables';
 import { NavBar, Burger } from '../components';
+import { Logo } from '../components/Logo';
 
 const HeaderWrap = styled.header`
   background-color: ${colors.primary};
@@ -38,16 +39,30 @@ const HeaderWrap = styled.header`
   &.menuOpen:before {
     transform: scaleX(1);
   }
-  
+
   & .indexTop,
   & .indexTop:before,
   & .indexTop:after {
     z-index: 3;
   }
-  
+
   &.scrolled .indexTop,
   &.menuOpen .indexTop {
     color: #000;
+  }
+
+  .logo {
+    cursor: pointer;
+
+    & svg {
+      height: calc(${otherVariables.headerHeight} * 0.7);
+      width: calc(${otherVariables.headerHeight} * 0.7);
+    }
+
+    &.scrolled path,
+    &.menuOpen path {
+      fill: #000;
+    }
   }
 `;
 
@@ -58,12 +73,8 @@ const HeaderInner = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.div`
-  cursor: pointer;
-`;
-
 const scrollToTop = () => {
-  scroll.scrollToTop({duration: 0});
+  scroll.scrollToTop({ duration: 0 });
 };
 
 export function Header() {
@@ -86,37 +97,42 @@ export function Header() {
   let headerWrapClass = '';
   let navBarClass = '';
   let burgerClass = '';
+  let logoClass = '';
 
   if (scrollTop === 0 && menuOpen === false) {
     headerWrapClass = '';
     navBarClass = '';
     burgerClass = '';
+    logoClass - '';
   }
 
   if (scrollTop !== 0 && menuOpen === false) {
     headerWrapClass = 'scrolled';
     navBarClass = 'indexTop';
     burgerClass = 'indexTop';
+    logoClass = 'indexTop scrolled';
   }
 
   if (scrollTop === 0 && menuOpen === true) {
     headerWrapClass = 'menuOpen';
     navBarClass = 'menuOpen indexTop';
     burgerClass = 'menuOpen indexTop';
+    logoClass = 'menuOpen indexTop';
   }
 
   if (scrollTop !== 0 && menuOpen === true) {
     headerWrapClass = 'menuOpen';
     navBarClass = 'menuOpen indexTop';
     burgerClass = 'menuOpen indexTop';
+    logoClass = 'menuOpen indexTop';
   }
 
   return (
     <HeaderWrap className={headerWrapClass}>
       <HeaderInner className="wrapLarge">
-        <Logo onClick={() => scrollToTop()} className="indexTop">
-          <p>LOGO</p>
-        </Logo>
+        <Logo
+          clickHandler={scrollToTop}
+          className={logoClass}></Logo>
         <Burger menuOpen={menuOpen} setMenuOpen={setMenuOpen} className={burgerClass} />
         <NavBar className={navBarClass} />
       </HeaderInner>
