@@ -24,13 +24,14 @@ export const projectsData = [
       'Back-end of a book rating app. Using Express.js to implement a REST API and MongoDB to stock the data. Protected according to OWASP security guidelines.',
     picture: 'vieux_grimoire.webp',
     skills: [
+      'Node.js',
       'Express.js',
       'Postman',
       'NoSQL',
       'MongoDB',
       'bcrypt',
       'mongoose',
-      'OWASP standards'
+      'OWASP standards',
     ],
     webLink: '#',
     codeLink: 'https://github.com/iya-kho/vieux-grimoire-books',
@@ -54,11 +55,3 @@ export const projectsData = [
     codeLink: 'https://github.com/iya-kho/portfolio',
   },
 ];
-
-/* 
-
-Vieux grimoire:
-Express, Postman, NoSQL, MongoDB, bcrypt, mongoose, security OWASP
-
-
-*/

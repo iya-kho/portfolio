@@ -144,7 +144,7 @@ export function Project({ projectInfo, className }) {
           <div className="buttons">
             <Button
               ghost
-              href={projectInfo.webLink}
+              href={projectInfo.codeLink}
               target="_blank"
               id="buttonTransp"
               className="button"
@@ -153,7 +153,7 @@ export function Project({ projectInfo, className }) {
             </Button>
             <Button
               type="default"
-              href={projectInfo.codeLink}
+              href={projectInfo.webLink}
               target="_blank"
               id="buttonFill"
               className="button"
