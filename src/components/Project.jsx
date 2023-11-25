@@ -5,7 +5,7 @@ import { Button } from 'antd';
 
 import { fonts, devices } from '../utils/style/variables';
 
-import { Laptop } from './Laptop';
+import { Laptop, TagsCloud } from './index';
 
 const ProjectStyled = styled.article`
   padding-top: 50px;
@@ -17,12 +17,12 @@ const ProjectStyled = styled.article`
 `;
 
 const ProjectInner = styled.div`
-  height: 700px;
+  // height: 700px;
   display: flex;
 
-  @media ${devices.laptopS} {
-    height: 670px;
-  }
+  // @media ${devices.laptopS} {
+  //   height: 670px;
+  // }
 
   @media ${devices.tabletL} {
     flex-direction: column;
@@ -69,12 +69,16 @@ const ProjectInner = styled.div`
     margin: 0 auto;
   }
 
-  .skills li {
+  .problems li {
     line-height: 2.5;
   }
 
   .checkIcon {
     margin-right: 7px;
+  }
+
+  .tag {
+    border-color: #fff;
   }
 
   #buttonFill {
@@ -132,15 +136,17 @@ export function Project({ projectInfo, className }) {
         <div className="descriptionContainer">
           <h3>{projectInfo.title}</h3>
           <p className="description">{projectInfo.description}</p>
-          <h4>Development tools</h4>
-          <ul className="skills">
-            {projectInfo.skills.map((skill, index) => (
-              <li key={skill + index}>
+          <h4>Problems solved</h4>
+          <ul className="problems">
+            {projectInfo.problems.map((problem, index) => (
+              <li key={problem + index}>
                 <CheckOutlined className="checkIcon" />
-                <span>{skill}</span>
+                <span>{problem}</span>
               </li>
             ))}
           </ul>
+          <h4>Development tools</h4>
+          <TagsCloud contentList={projectInfo.tools} color='transparent'></TagsCloud>
           <div className="buttons">
             <Button
               ghost
@@ -163,7 +169,10 @@ export function Project({ projectInfo, className }) {
           </div>
         </div>
         <div className="laptopContainer">
-          <Laptop imgPath={`${process.env.PUBLIC_URL}/images/projects/${projectInfo.picture}`} className="laptop" />
+          <Laptop
+            imgPath={`${process.env.PUBLIC_URL}/images/projects/${projectInfo.picture}`}
+            className="laptop"
+          />
         </div>
       </ProjectInner>
     </ProjectStyled>

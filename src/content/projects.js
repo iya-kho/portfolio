@@ -1,15 +1,40 @@
 export const projectsData = [
   {
+    title: 'Portfolio of an architecte',
+    description:
+      // eslint-disable-next-line
+      `A portfolio website featuring the work of an architect. Constructed using Vanilla JavaScript, the site communicates with an API, allowing for dynamic content updates.`,
+    picture: 'portfolio_architecte.webp',
+    problems: [
+      'Dynamic content updates: API calls',
+      'User identification: API POST request',
+      'Error handling: try...catch, Error object',
+      'Custom form validator: an object with methods',
+      'Custom filter: dataset, conditions',
+      'Custom gallery: dataset, conditions, modal window',
+    ],
+    tools: ['HTML', 'CSS', 'Vanilla JavaScript', 'API calls', 'asynchronous functions', 'OOP'],
+    webLink: 'https://iya-kho.github.io/portfolio_architecte/',
+    codeLink: 'https://github.com/iya-kho/portfolio_architecte',
+  },
+  {
     title: 'Kasa Apartments',
     description:
       'Front-end of apartment rental app. Using React Router for navigation and enhanced with custom elements, such as a carousel slider.',
     picture: 'kasa_apartments.webp',
-    skills: [
+    problems: [
+      'Avoid repetitions of the code: React Components',
+      'Single-page application with navigation between sections: React Router',
+      'Information about an apartment on click: params, props, React hooks',
+      'Custom carousel slider: useState, useEffect, CSS animations',
+      'Maintainable styles: SCSS',
+      'Dropdown menu: CSS animations',
+      'Display icons: SVG sprites'
+    ],
+    tools: [
       'React',
       'React Hooks',
       'React Router',
-      'Custom carousel slider',
-      'CSS animations',
       'SCSS',
       'eslint',
       'SVG Sprites',
@@ -23,13 +48,25 @@ export const projectsData = [
     description:
       'Back-end of a book rating app. Using Express.js to implement a REST API and MongoDB to stock the data. Protected according to OWASP security guidelines.',
     picture: 'vieux_grimoire.webp',
-    skills: [
+    problems: [
+      'Build a REST API: Express.js, mongoose',
+      'Check the fonctionality of the API: Postman',
+      'Stock the data: MongoDB, NoSQL',
+      'Identify the user: bcrypt, jsonwebtoken',
+      'Validate the password: password-validator plugin',
+      'Protect the application: Helmet, rate-limit, .env file'
+    ],
+    tools: [
       'Node.js',
       'Express.js',
       'Postman',
       'NoSQL',
       'MongoDB',
       'bcrypt',
+      'jsonwebtoken',
+      'Helmet',
+      'ratelimit',
+      'Environmental variables',
       'mongoose',
       'OWASP standards',
     ],
@@ -41,7 +78,14 @@ export const projectsData = [
     description:
       'A dynamic landing page showcasing my works as a web developer. Built with React and featuring some CSS animations and Ant Design components.',
     picture: 'portfolio.webp',
-    skills: [
+    problems: [
+      'Navigation: react-scroll library',
+      'Typing animation: react-type-animation library',
+      'Laptop frame: pure CSS',
+      'Easy-to-use UI components: Ant Design',
+      'Maintainable styles: Styled Components'
+    ],
+    tools: [
       'React',
       'React Hooks',
       'Styled Components',
@@ -49,7 +93,6 @@ export const projectsData = [
       'React typing animation',
       'React scroll',
       'Ant Design',
-      'Pure CSS laptop frame',
     ],
     webLink: 'ttps://iya-kho.github.io/portfolio/',
     codeLink: 'https://github.com/iya-kho/portfolio',

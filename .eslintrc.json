@@ -1,7 +1,7 @@
 {
   "env": {
     "node": true,
-    "browser": true,
+    "browser": true
   },
   "root": true,
   "extends": ["eslint:recommended", "plugin:react/recommended"],
