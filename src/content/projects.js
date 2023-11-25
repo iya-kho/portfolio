@@ -29,18 +29,10 @@ export const projectsData = [
       'Custom carousel slider: useState, useEffect, CSS animations',
       'Maintainable styles: SCSS',
       'Dropdown menu: CSS animations',
-      'Display icons: SVG sprites'
+      'Display icons: SVG sprites',
     ],
-    tools: [
-      'React',
-      'React Hooks',
-      'React Router',
-      'SCSS',
-      'eslint',
-      'SVG Sprites',
-      'CSS grid',
-    ],
-    webLink: '#',
+    tools: ['React', 'React Hooks', 'React Router', 'SCSS', 'eslint', 'SVG Sprites', 'CSS grid'],
+    webLink: 'https://iya-kho.github.io/kasa-apartments',
     codeLink: 'https://github.com/iya-kho/kasa-apartments',
   },
   {
@@ -54,7 +46,7 @@ export const projectsData = [
       'Stock the data: MongoDB, NoSQL',
       'Identify the user: bcrypt, jsonwebtoken',
       'Validate the password: password-validator plugin',
-      'Protect the application: Helmet, rate-limit, .env file'
+      'Protect the application: Helmet, rate-limit, .env file',
     ],
     tools: [
       'Node.js',
@@ -70,7 +62,7 @@ export const projectsData = [
       'mongoose',
       'OWASP standards',
     ],
-    webLink: '#',
+    webLink: 'https://iya-kho.github.io/vieux-grimoire-books',
     codeLink: 'https://github.com/iya-kho/vieux-grimoire-books',
   },
   {
@@ -83,7 +75,7 @@ export const projectsData = [
       'Typing animation: react-type-animation library',
       'Laptop frame: pure CSS',
       'Easy-to-use UI components: Ant Design',
-      'Maintainable styles: Styled Components'
+      'Maintainable styles: Styled Components',
     ],
     tools: [
       'React',
