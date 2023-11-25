@@ -81,16 +81,16 @@ const ProjectInner = styled.div`
     border-color: #fff;
   }
 
-  #buttonFill {
-    display: none;
+  .buttonFill {
+    display: none !important;
   }
 
-  #buttonTransp {
+  .buttonTransp {
     margin-right: 40px;
   }
 
-  #buttonTransp,
-  #buttonFill {
+  .buttonTransp,
+  .buttonFill {
     font-family: ${fonts.primary};
 
     @media ${devices.mobileL} {
@@ -98,14 +98,14 @@ const ProjectInner = styled.div`
     }
   }
 
-  #buttonTransp:hover {
-    color: #fff;
-    border-color: #fff;
+  .buttonTransp:hover {
+    color: #fff !important;
+    border-color: #fff !important;
   }
 
-  #buttonFill:hover {
-    border-color: #d9d9d9;
-    color: rgba(0, 0, 0, 0.88);
+  .buttonFill:hover {
+    border-color: #d9d9d9 !important;
+    color: rgba(0, 0, 0, 0.88) !important;
   }
 
   .buttons {
@@ -129,7 +129,7 @@ const ProjectInner = styled.div`
   }
 `;
 
-export function Project({ projectInfo, className }) {
+export function Project({ projectInfo, className, projectsLength, index }) {
   return (
     <ProjectStyled className={className}>
       <ProjectInner className="wrapLarge">
@@ -146,26 +146,35 @@ export function Project({ projectInfo, className }) {
             ))}
           </ul>
           <h4>Development tools</h4>
-          <TagsCloud contentList={projectInfo.tools} color='transparent'></TagsCloud>
+          <TagsCloud contentList={projectInfo.tools} color="transparent"></TagsCloud>
           <div className="buttons">
             <Button
               ghost
               href={projectInfo.codeLink}
               target="_blank"
-              id="buttonTransp"
-              className="button"
+              className="button buttonTransp"
             >
               Check out the code
             </Button>
-            <Button
-              type="default"
-              href={projectInfo.webLink}
-              target="_blank"
-              id="buttonFill"
-              className="button"
-            >
-              See it online
-            </Button>
+            {index === projectsLength - 1 ? (
+              <Button
+                type="default"
+                href='#home'
+                target="_self"
+                className="button buttonFill"
+              >
+                See it online
+              </Button>
+            ) : (
+              <Button
+                type="default"
+                href={projectInfo.webLink}
+                target="_blank"
+                className="button buttonFill"
+              >
+                See it online
+              </Button>
+            )}
           </div>
         </div>
         <div className="laptopContainer">
@@ -182,4 +191,6 @@ export function Project({ projectInfo, className }) {
 Project.propTypes = {
   projectInfo: PropTypes.object,
   className: PropTypes.string,
+  projectsLength: PropTypes.number,
+  index: PropTypes.number
 };

@@ -86,7 +86,7 @@ export const projectsData = [
       'React scroll',
       'Ant Design',
     ],
-    webLink: 'ttps://iya-kho.github.io/portfolio/',
+    webLink: '#Home',
     codeLink: 'https://github.com/iya-kho/portfolio',
   },
 ];
