@@ -55,6 +55,7 @@ export const skillsList = [
   'Node.js',
   'Responsive design',
   'webpack',
+  'prettier',
   'jQuery',
   'Git',
   'SEO/Core Web Vitals',

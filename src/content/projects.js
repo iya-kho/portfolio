@@ -20,7 +20,7 @@ export const projectsData = [
   {
     title: 'Kasa Apartments',
     description:
-      'Front-end of apartment rental app. Using React Router for navigation and enhanced with custom elements, such as a carousel slider.',
+      'Front-end of an apartment rental platform. Using React Router for navigation and styled with SCSS, the app is enhanced with custom elements, such as a carousel slider.',
     picture: 'kasa_apartments.webp',
     problems: [
       'Avoid repetitions of the code: React Components',
@@ -38,7 +38,7 @@ export const projectsData = [
   {
     title: 'Vieux Grimoire Books',
     description:
-      'Back-end of a book rating app. Using Express.js to implement a REST API and MongoDB to stock the data. Protected according to OWASP security guidelines.',
+      'Back-end of a book rating website. Using Express.js to implement a REST API and MongoDB to stock the data, the app is protected according to OWASP security guidelines.',
     picture: 'vieux_grimoire.webp',
     problems: [
       'Build a REST API: Express.js, mongoose',
@@ -68,7 +68,7 @@ export const projectsData = [
   {
     title: 'The current portfolio',
     description:
-      'A dynamic landing page showcasing my works as a web developer. Built with React and featuring some CSS animations and Ant Design components.',
+      'A dynamic landing page showcasing my works as a web developer. Crafted with React Styled Components and featuring some CSS animations and Ant Design components.',
     picture: 'portfolio.webp',
     problems: [
       'Navigation: react-scroll library',
