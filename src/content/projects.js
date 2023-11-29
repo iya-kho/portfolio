@@ -14,8 +14,8 @@ export const projectsData = [
       'Custom gallery: dataset, conditions, modal window',
     ],
     tools: ['HTML', 'CSS', 'Vanilla JavaScript', 'API calls', 'asynchronous functions', 'OOP'],
-    webLink: 'https://iya-kho.github.io/portfolio_architecte/',
-    codeLink: 'https://github.com/iya-kho/portfolio_architecte',
+    webLink: 'https://iya-kho.github.io/portfolio_architect/',
+    codeLink: 'https://github.com/iya-kho/portfolio_architect',
   },
   {
     title: 'Kasa Apartments',
