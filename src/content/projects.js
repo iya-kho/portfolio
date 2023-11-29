@@ -1,6 +1,6 @@
 export const projectsData = [
   {
-    title: 'Portfolio of an architecte',
+    title: 'Portfolio of an architect',
     description:
       // eslint-disable-next-line
       `A portfolio website featuring the work of an architect. Constructed using Vanilla JavaScript, the site communicates with an API, allowing for dynamic content updates.`,
