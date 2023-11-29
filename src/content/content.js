@@ -33,7 +33,7 @@ export const aboutText = [
     <span>🗣️ Excellent Communication Skills: </span>With a decade of experience in language
     teaching, I&apos;ve cultivated exceptional communication skills. This linguistic background,
     coupled with proficiency in English, enables me to articulate complex technical concepts
-    clearly. and collaborate effectively within a team.
+    clearly and collaborate effectively within a team.
   </p>,
   <p key="final">
     Let&apos;s build something extraordinary together! Feel free to explore my portfolio, and

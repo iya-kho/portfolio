@@ -42,7 +42,7 @@ export const projectsData = [
     picture: 'vieux_grimoire.webp',
     problems: [
       'Build a REST API: Express.js, mongoose',
-      'Check the fonctionality of the API: Postman',
+      'Check the functionality of the API: Postman',
       'Stock the data: MongoDB, NoSQL',
       'Identify the user: bcrypt, jsonwebtoken',
       'Validate the password: password-validator plugin',
