@@ -21,7 +21,7 @@ export const aboutText = [
     What I Bring to the Table:
   </span>,
   <p key="hard-skills">
-    <span>💻 Code Wizardry: </span>Proficient in HTML, CSS, JavaScript. I derive joy from
+    <span>💻 Code Wizardry: </span>Proficient in HTML, CSS, JavaScript, I derive joy from
     transforming concepts into functional, visually appealing websites. Additionally, I bring
     expertise in React and Node.js, empowering me to build dynamic and scalable web solutions.
   </p>,
