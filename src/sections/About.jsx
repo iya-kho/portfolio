@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { aboutText, skillsList } from '../content/content';
 import { devices, colors } from '../utils/style/variables';
 
-import { TagsCloud } from '../components';
+import { TagsCloud, BtnDownload } from '../components';
 
 const AboutStyled = styled.section`
-  \ @media ${devices.tabletS} {
+  @media ${devices.tabletS} {
     width: 100%;
   }
 
@@ -21,7 +21,11 @@ const AboutStyled = styled.section`
     }
   }
   .skills {
-    margin-top: 50px;
+    margin: 50px 0;
+  }
+
+  .btnDownload {
+    margin: 0 auto;
   }
 `;
 
@@ -34,6 +38,7 @@ export function About() {
         <h4>skills</h4>
         <TagsCloud contentList={skillsList} color={colors.primary}></TagsCloud>
       </div>
+      <BtnDownload/>
     </AboutStyled>
   );
 }
