@@ -5,7 +5,7 @@ import { Button } from 'antd';
 
 import { fonts, devices } from '../utils/style/variables';
 
-import { Laptop, TagsCloud } from './index';
+import { Laptop } from './index';
 
 const ProjectStyled = styled.article`
   padding-top: 50px;
@@ -17,12 +17,12 @@ const ProjectStyled = styled.article`
 `;
 
 const ProjectInner = styled.div`
-  // height: 700px;
+  height: 650px;
   display: flex;
 
-  // @media ${devices.laptopS} {
-  //   height: 670px;
-  // }
+  @media ${devices.laptopS} {
+    height: 600px;
+  }
 
   @media ${devices.tabletL} {
     flex-direction: column;
@@ -69,7 +69,7 @@ const ProjectInner = styled.div`
     margin: 0 auto;
   }
 
-  .problems li {
+  .tools li {
     line-height: 2.5;
   }
 
@@ -136,17 +136,15 @@ export function Project({ projectInfo, className, projectsLength, index }) {
         <div className="descriptionContainer">
           <h3>{projectInfo.title}</h3>
           <p className="description">{projectInfo.description}</p>
-          <h4>Problems solved</h4>
-          <ul className="problems">
-            {projectInfo.problems.map((problem, index) => (
-              <li key={problem + index}>
+          <h4>Development tools</h4>
+          <ul className="tools">
+            {projectInfo.tools.map((tool, index) => (
+              <li key={tool + index}>
                 <CheckOutlined className="checkIcon" />
-                <span>{problem}</span>
+                <span>{tool}</span>
               </li>
             ))}
           </ul>
-          <h4>Development tools</h4>
-          <TagsCloud contentList={projectInfo.tools} color="transparent"></TagsCloud>
           <div className="buttons">
             <Button
               ghost
@@ -157,12 +155,7 @@ export function Project({ projectInfo, className, projectsLength, index }) {
               Check out the code
             </Button>
             {index === projectsLength - 1 ? (
-              <Button
-                type="default"
-                href='#home'
-                target="_self"
-                className="button buttonFill"
-              >
+              <Button type="default" href="#home" target="_self" className="button buttonFill">
                 See it online
               </Button>
             ) : (
@@ -192,5 +185,5 @@ Project.propTypes = {
   projectInfo: PropTypes.object,
   className: PropTypes.string,
   projectsLength: PropTypes.number,
-  index: PropTypes.number
+  index: PropTypes.number,
 };
