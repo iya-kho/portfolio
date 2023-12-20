@@ -79,12 +79,8 @@ const ProjectInner = styled.div`
 
   .tag {
     border-color: #fff;
-  }
-
-  .buttonFill {
-    display: none !important;
-  }
-
+  } 
+  
   .buttonTransp {
     margin-right: 40px;
   }
