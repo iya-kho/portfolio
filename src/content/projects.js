@@ -6,7 +6,7 @@ export const projectsData = [
       `A portfolio website featuring the work of an architect. Constructed using Vanilla JavaScript, the site communicates with an API, allowing for dynamic content updates.`,
     picture: 'portfolio_architecte.webp',
     tools: [
-      'HTML',
+      'HTML5',
       'CSS',
       'Vanilla JavaScript',
       'API calls',
@@ -38,8 +38,34 @@ export const projectsData = [
       'Back-end of a book rating website. Using Express.js to implement a REST API and MongoDB to stock the data, the app is protected according to OWASP security guidelines.',
     picture: 'vieux_grimoire.webp',
     tools: ['Node.js', 'Express.js', 'Postman', 'NoSQL', 'MongoDB', 'mongoose', 'OWASP standards'],
-    webLink: 'https://vieux-grimoire.onrender.com/',
+    webLink: 'https://iya-kho.github.io/vieux-grimoire-books//',
     codeLink: 'https://github.com/iya-kho/vieux-grimoire-books',
+  },
+  {
+    title: 'Snake game',
+    description:
+      'An interactive browser game written in Vanilla JavaScript and using Object-Oriented Programming principles, such as inheritance and encapsulation.',
+    picture: 'snake_game.webp',
+    tools: ['HTML5', 'CSS', 'Vanilla JavaScript', 'OOP principles', 'Classes', 'Design Patterns'],
+    webLink: 'https://iya-kho.github.io/snake-game',
+    codeLink: 'https://iya-kho.github.io/snake-game',
+  },
+  {
+    title: 'HLegal landing page',
+    description:
+      'A responsive landing page of a legal company. Written in maintainable HTML/CSS and incorporating CSS animations and jQuery plugins for added interactivity.',
+    picture: 'hlegal.webp',
+    tools: [
+      'HTML5',
+      'CSS',
+      'jQuery plugins',
+      'Responsive design',
+      'IcoMoon',
+      'Figma',
+      'CSS animations',
+    ],
+    webLink: 'https://iya-kho.github.io/hlegal',
+    codeLink: 'https://github.com/iya-kho/hlegal',
   },
   {
     title: 'The current portfolio',
