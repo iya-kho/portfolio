@@ -48,7 +48,7 @@ export const projectsData = [
     picture: 'snake_game.webp',
     tools: ['HTML5', 'CSS', 'Vanilla JavaScript', 'OOP principles', 'Classes', 'Design Patterns'],
     webLink: 'https://iya-kho.github.io/snake-game',
-    codeLink: 'https://iya-kho.github.io/snake-game',
+    codeLink: 'https://github.com/iya-kho/snake-game',
   },
   {
     title: 'HLegal landing page',
