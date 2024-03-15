@@ -85,6 +85,10 @@ const ProjectInner = styled.div`
     margin-right: 40px;
   }
 
+  .buttonFill {
+    display: none !important;
+  }
+
   .buttonTransp,
   .buttonFill {
     font-family: ${fonts.primary};

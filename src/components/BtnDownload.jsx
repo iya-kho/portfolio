@@ -23,7 +23,7 @@ const BtnStyled = styled.div`
 export function BtnDownload() {
   const onButtonClick = () => {
     const link = document.createElement('a');
-    link.href = `${process.env.PUBLIC_URL}/assets/CV_Iya_KHOROVA_Junior_Frontend.pdf`;
+    link.href = `${process.env.PUBLIC_URL}/assets/CV_Iya_KHOROVA_Junior_Web_Developer.pdf`;
     link.target = '_blank';
     document.body.appendChild(link);
     link.click();

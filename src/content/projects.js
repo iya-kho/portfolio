@@ -1,5 +1,24 @@
 export const projectsData = [
   {
+    title: 'Tom Troc Books',
+    description:
+      // eslint-disable-next-line
+      `A dynamic web application enabling book exchange among users. Featuring a custom messenger, the platform is developed in PHP following the MVC pattern and uses Bootstrap for style and MySQL for data management.`,
+    picture: 'tomtroc.webp',
+    tools: [
+      'HTML5',
+      'Bootstrap',
+      'PHP',
+      'MVC pattern',
+      'MySQL',
+      'OOP principles',
+      'Custom messenger',
+      'CRUD operations',
+    ],
+    webLink: '',
+    codeLink: 'https://github.com/iya-kho/tomtroc_books',
+  },
+  {
     title: 'Portfolio of an architect',
     description:
       // eslint-disable-next-line
@@ -9,7 +28,7 @@ export const projectsData = [
       'HTML5',
       'CSS',
       'Vanilla JavaScript',
-      'API calls',
+      'CRUD operations',
       'Custom form validator',
       'Custom gallery',
     ],
