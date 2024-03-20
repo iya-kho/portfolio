@@ -71,6 +71,7 @@ export const skillsList = [
   'Cross-browser compatibility',
   'design patterns',
   'Postman',
+  'Node-RED basics'
 ];
 
 export const contactInfo = {

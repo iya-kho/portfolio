@@ -87,6 +87,22 @@ export const projectsData = [
     codeLink: 'https://github.com/iya-kho/hlegal',
   },
   {
+    title: 'Chatbot built with Node-RED',
+    description:
+      'Telegram chatbot project, constructed using the low-code platform Ubos. Utilizing visual programming through Node-RED, it integrates APIs from OpenAI and Google Cloud to generate responses.',
+    picture: 'ubos.png',
+    tools: [
+      'JavaScript',
+      'Node-RED',
+      'Ubos',
+      'Telegram chatbot',
+      'OpenAI API',
+      'Google Cloud API'
+    ],
+    webLink: '',
+    codeLink: 'https://github.com/iya-kho/ubos-project-nr',
+  },
+  {
     title: 'The current portfolio',
     description:
       'A dynamic landing page showcasing my works as a web developer. Crafted with React Styled Components and featuring some CSS animations and Ant Design components.',
