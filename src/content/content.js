@@ -1,9 +1,9 @@
 export const aboutText = [
   <p key="greeting">
-    Hi there! I&apos;m Iya Khorova, an IT technical writer with a double background in linguistics and web development, helping businesses bridge the gap between developers and end users.
+    Hi there! I&apos;m Iya Khorova, a senior-level language professional with a technical background.
   </p>,
   <p key="skills-title">
-    What I Bring to the Table:
+    What I bring to the table:
   </p>,
   <p key="education">
     🎓 <span>Master&apos;s in Applied Linguistics</span> from Paris-Sorbonne University and <span>Bachelor&apos;s in Web Development</span> from Limoges University.
@@ -29,30 +29,29 @@ export const aboutText = [
 ];
 
 export const skillsList = [
-  'DITA XML',
-  'Oxygen XML',
-  'GitHub Wiki',
-  'Markdown',
-  'HTML5',
-  'CSS3',
-  'JavaScript',
-  'PHP',
-  'SQL',
-  'React',
-  'Git',
-  'MongoDB basics',
-  'Node.js basics',
-  'REST API',
-  'Postman',
-  'Swagger',
-  'OpenAPI',
-  'Bootstrap',
-  'SASS',
-  'Tailwind CSS',
+  'HTML',
+  'CSS',
+  'JavaScript', 
+  'TypeScript',
+  'React.js',
+  'SQL', 
+  'MongoDB',
   'Figma',
-  'OOP',
-  'jQuery',
-  'SEO/Core Web Vitals'
+  'WordPress',
+  'Confluence', 
+  'Jira', 
+  'Bitbucket',
+  'UML', 
+  'BPMN',
+  'Markdown',
+  'Postman',
+  'Swagger', 
+  'OpenAPI',
+  'Git',
+  'DITA', 
+  'Oxygen XML',
+  'PHP',
+  'Python'
 ];
 
 export const contactInfo = {

@@ -69,7 +69,7 @@ const ProjectInner = styled.div`
     margin: 0 auto;
   }
 
-  .tools li {
+  .skills li {
     line-height: 2.5;
   }
 
@@ -132,24 +132,28 @@ export function Project({ projectInfo, className }) {
         <div className="descriptionContainer">
           <h3>{projectInfo.title}</h3>
           <p className="description">{projectInfo.description}</p>
-          <h4>Development tools</h4>
-          <ul className="tools">
-            {projectInfo.tools.map((tool, index) => (
-              <li key={tool + index}>
+          <h4>Skills</h4>
+          <ul className="skills">
+            {projectInfo.skills.map((skill, index) => (
+              <li key={skill + index}>
                 <CheckOutlined className="checkIcon" />
-                <span>{tool}</span>
+                <span>{skill}</span>
               </li>
             ))}
           </ul>
           <div className="buttons">
-            <Button
-              ghost
-              href={projectInfo.codeLink}
-              target="_blank"
-              className="button buttonTransp"
-            >
-              Check out the code
-            </Button>
+            {projectInfo.codeLink.isActive ? (
+              <Button
+                ghost
+                href={projectInfo.codeLink.link}
+                target="_blank"
+                className="button buttonTransp"
+              >
+                Check out the code
+              </Button>
+            ) : (
+              ''
+            )}
             {projectInfo.webLink.isActive ? (
               <Button
                 type="default"
