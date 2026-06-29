@@ -128,7 +128,7 @@ export function Home() {
               cursor={false}
               className={CURSOR_CLASS_NAME}
               sequence={[
-                'a tech writer / web developer',
+                'a product manager / owner',
                 100,
                 el => {
                   setLinesTyped(2);
