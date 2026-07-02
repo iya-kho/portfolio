@@ -21,7 +21,7 @@ export const aboutText = [
     📔 Before tech: 10 years in language teaching and instructional design - 7,000+ classes taught, which is where I learned to explain complex things simply and read an audience.
   </p>,
   <p key="languages">
-    🗣️ Languages: English (CPE, C2), French (DALF, C2), Ukrainian (native), Russian (native).
+    🗣️ Languages: English (CPE, C2), French (DALF, C2), Ukrainian (native).
   </p>,
   <p key="final">
     Let&apos;s connect - feel free to explore my case studies below, or reach out to talk about product, AI, or anything in between. 🌐✨
